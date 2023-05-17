@@ -34,7 +34,7 @@ button {
 }
 
 .input {
-    background-color:antiquewhite; 
+    background-color:rgb(250, 234, 214); 
     width: 80vw;
     height: 35px;
     margin-bottom: 10px;
@@ -45,7 +45,7 @@ button {
 
 .button {
     background-color: rgb(47, 99, 81);
-    color:antiquewhite;
+    color:rgb(250, 235, 215);
     font-size: 12px;
     height: 37px;
     width: 100px;
@@ -57,9 +57,40 @@ button {
 }
 
 .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
     color: rgb(47, 99, 81);
     font-size: 18px;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-left: 10px;
+    margin-left: 8px;
+    padding-right: 8px;
 }
+
+.button-remove {
+    width: 10px;
+    height: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.button-remove:after,
+.button-remove:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: rgb(47, 99, 81);
+}
+
+.button-remove:after {
+    transform: rotate(45deg);
+}
+
+.button-remove:before {
+    transform: rotate(-45deg);
+}
+

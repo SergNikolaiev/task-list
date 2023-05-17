@@ -11,11 +11,25 @@ const addTask = (evt) => {
     if(valueInput !== '') {
         const task = document.createElement('li');
         task.textContent = valueInput;
-        tasksRef.append(task);
         task.classList.add('task');
+        tasksRef.append(task);
+        
+        buttonRemoveTask(task)
     }
+    
     inputRef.value = '';   
 }
+
+const buttonRemoveTask = (task) => {
+    const buttonRemove = document.createElement('span');
+    buttonRemove.classList.add('button-remove');
+    task.append(buttonRemove);
+    buttonRemove.addEventListener('click', () => {
+        task.remove()
+    })
+}
+
+
 
 
 
