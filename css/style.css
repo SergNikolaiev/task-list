@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: azure;
+    background-color: rgb(240, 255, 255);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,11 +67,13 @@ button {
     padding-bottom: 7px;
     margin-left: 8px;
     padding-right: 8px;
+    word-break: break-all;
 }
 
 .button-remove {
     width: 10px;
     height: 10px;
+    padding-left: 10px;
     border: none;
     cursor: pointer;
     border-radius: 50%;
