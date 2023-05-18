@@ -2,8 +2,9 @@
 
 const inputRef = document.querySelector('#task');
 const buttonAddRef = document.querySelector('.button.button-add');
-const tasksRef = document.querySelector('.list-tasks')
-const textOutputRef = document.querySelector('.text-output')
+const tasksRef = document.querySelector('.list-tasks');
+const textOutputRef = document.querySelector('.text-output');
+const buttonClearRef = document.querySelector('.button-clear')
 
 const addTask = (evt) => {
     evt.preventDefault();
@@ -16,7 +17,6 @@ const addTask = (evt) => {
         
         buttonRemoveTask(task)
     }
-    
     inputRef.value = '';   
 }
 
@@ -29,8 +29,9 @@ const buttonRemoveTask = (task) => {
     })
 }
 
+const clearTasks = () => {
+    tasksRef.innerHTML = ''
+}
 
-
-
-
+buttonClearRef.addEventListener('click', clearTasks)
 buttonAddRef.addEventListener('click', addTask)
